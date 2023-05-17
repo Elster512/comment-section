@@ -1,0 +1,19 @@
+.custom-button {
+  border: none;
+  background-color: var(--white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  cursor: pointer;
+}
+.custom-button span {
+  margin-left: 5px;
+}
+.reply {
+  color: var(--primary-m-blue);
+}
+.delete {
+  color: var(--primary-s-red);
+}

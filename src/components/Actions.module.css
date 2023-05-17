@@ -1,0 +1,26 @@
+.comment-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-vl-gray);
+  width: 37px;
+  height: 100px;
+  border-radius: 10px;
+}
+.comment-points button {
+  border: none;
+  width: 30%;
+  height: 35%;
+  background-color: var(--neutral-vl-gray);
+  color: var(--primary-lg-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+.comment-points span {
+  color: var(--primary-m-blue);
+  font-weight: 700;
+}
+.activated {
+  color: var(--primary-m-blue) !important;
+}

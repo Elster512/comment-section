@@ -1,0 +1,43 @@
+@import '../index.css';
+.addcomment {
+  width: 690px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: start;
+  padding: 15px 30px;
+}
+.replying {
+  width: 630px;
+}
+.addcomment img {
+  width: 9%;
+  height: 9%;
+  object-fit: cover;
+}
+.addcomment textarea {
+  max-width: 400px;
+  min-width: 400px;
+  max-height: 70px;
+  min-height: 70px;
+  border-radius: 13px;
+  resize: none;
+  border: 1px solid var(--neutral-l-gray);
+  padding: 10px 20px;
+  background-color: var(--white);
+}
+.addcomment textarea:focus {
+  border: 1px solid var(--primary-m-blue);
+  outline: none !important;
+}
+.addcomment button {
+  background-color: var(--primary-m-blue);
+  color: var(--white);
+  font-weight: 600;
+  width: 90px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

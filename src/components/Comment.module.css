@@ -1,0 +1,128 @@
+.comment-with-replies {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.comment-with-replies:last-child {
+  margin-bottom: 0;
+}
+.comment {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: start;
+  padding: 10px 20px;
+  margin: 0;
+}
+.notreply {
+  width: 690px;
+}
+.reply {
+  width: 630px;
+}
+.reply:first-child {
+  margin: 0;
+}
+.reply:last-child {
+  margin-bottom: 0;
+}
+.comment-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 2px 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.comment-user {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.comment-user img {
+  width: 13%;
+  height: 13%;
+  object-fit: cover;
+}
+.comment-user img,
+h3,
+p {
+  margin: 0 5px;
+}
+.comment-user h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-text {
+  padding: 10px 10px;
+  color: inherit;
+  font-weight: 500;
+}
+
+.hastag {
+  font-weight: 700;
+  color: var(--primary-m-blue);
+}
+.you {
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--primary-m-blue);
+  display: block;
+  margin-left: 10px;
+  width: 40px;
+  text-align: center;
+  height: 22px;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.replies {
+  margin-top: 10px;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--neutral-l-gray);
+}
+.class {
+  width: 100%;
+}
+.editing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: end;
+}
+.editing textarea {
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  border-radius: 13px;
+  resize: none;
+  border: 1px solid var(--neutral-l-gray);
+  padding: 10px 20px;
+  background-color: var(--white);
+}
+
+.editing textarea:focus {
+  border: 1px solid var(--primary-m-blue);
+  outline: none !important;
+}
+
+.editing button {
+  background-color: var(--primary-m-blue);
+  color: var(--white);
+  font-weight: 600;
+  width: 90px;
+  height: 40px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
