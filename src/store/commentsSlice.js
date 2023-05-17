@@ -163,22 +163,30 @@ const commentSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(loadAllComments.fulfilled, (state, action) => {
-        return action.payload;
+        if (action.payload) {
+          return action.payload;
+        }
       })
       .addCase(addComment.fulfilled, (state, action) => {
-        return [...state].concat(action.payload);
+        if (action.payload) {
+          return [...state].concat(action.payload);
+        }
       })
       .addCase(deleteComment.fulfilled, (state, action) => {
-        return [...state].filter((comment) => comment.id !== action.payload);
+        if (action.payload) {
+          return [...state].filter((comment) => comment.id !== action.payload);
+        }
       })
       .addMatcher(
         (action) => action.type.endsWith('reply/fulfilled'),
         (state, action) => {
           const updatedComment = action.payload;
-          const index = state.findIndex(
-            (comment) => comment.id === action.payload.id
-          );
-          state[index] = updatedComment;
+          if (updatedComment) {
+            const index = state.findIndex(
+              (comment) => comment.id === action.payload.id
+            );
+            state[index] = updatedComment;
+          }
         }
       );
   },
